@@ -11,6 +11,9 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/contact.js';
 
+// Styles
+import style from '../styles/index.css';
+
 // Other
 import SwipeableViews from 'react-swipeable-views';
 
@@ -32,17 +35,17 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img src='https://i.imgur.com/lTvTCbs.png' alt="" style={{margin: 'auto', display: 'block', width: '40%'}}/>
+        <img src='https://i.imgur.com/lTvTCbs.png' alt="" style={{'margin': '20px auto auto auto', display: 'block', width: '40%'}}/>
         <MuiThemeProvider>
           <div>
             <Tabs
               value={this.state.value}
               onChange={this.handleChange}
-              inkBarStyle={{backgroundColor: 'red', marginLeft: '12.5%'}}
-              tabItemContainerStyle={{width: '80%', margin: 'auto'}}>
-              <Tab label="Home" value={0} style={{backgroundColor: '#584915'}}/>
-              <Tab label="About Us" value={1} style={{backgroundColor: '#584915'}}/>
-              <Tab label="Contact" value={2} style={{backgroundColor: '#584915'}}/>
+              inkBarStyle={{backgroundColor: '#d7ba57', marginLeft: '12.5%', 'borderRadius': '30%', 'height': '4px'}}
+              tabItemContainerStyle={{background: '#584915',width: '80%', margin: 'auto'}}>
+              <Tab className={style.tab} label="Home" value={0}/>
+              <Tab className={style.tab} label="About Us" value={1}/>
+              <Tab className={style.tab} label="Contact" value={2}/>
             </Tabs>
 
             <SwipeableViews
