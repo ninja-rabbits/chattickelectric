@@ -1,16 +1,24 @@
+// React
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+
+// Material UI
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Tabs, Tab} from 'material-ui/Tabs';
+
+// Components
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/contact.js';
+
+// Other
+import SwipeableViews from 'react-swipeable-views';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: 'a',
+      value: 0,
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -32,17 +40,17 @@ class App extends Component {
             inkBarStyle={{backgroundColor: 'red', marginLeft: '12.5%'}}
             tabItemContainerStyle={{width: '80%', margin: 'auto'}}
           >
-            <Tab label="Home" value="a" style={{backgroundColor: '#584915'}}>
+            <Tab label="Home" value={0} style={{backgroundColor: '#584915'}}>
               <div>
                 <Home/>
               </div>
             </Tab>
-            <Tab label="About Us" value="b" style={{backgroundColor: '#584915'}}>
+            <Tab label="About Us" value={1} style={{backgroundColor: '#584915'}}>
               <div>
                 <About/>
               </div>
             </Tab>
-            <Tab label="Contact" value="c" style={{backgroundColor: '#584915'}}>
+            <Tab label="Contact" value={2} style={{backgroundColor: '#584915'}}>
               <Contact/>
             </Tab>
           </Tabs>
