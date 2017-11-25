@@ -34,26 +34,25 @@ class App extends Component {
       <div className="App">
         <img src='https://i.imgur.com/lTvTCbs.png' alt="" style={{margin: 'auto', display: 'block', width: '40%'}}/>
         <MuiThemeProvider>
-          <Tabs
-            value={this.state.value}
-            onChange={this.handleChange}
-            inkBarStyle={{backgroundColor: 'red', marginLeft: '12.5%'}}
-            tabItemContainerStyle={{width: '80%', margin: 'auto'}}
-          >
-            <Tab label="Home" value={0} style={{backgroundColor: '#584915'}}>
-              <div>
-                <Home/>
-              </div>
-            </Tab>
-            <Tab label="About Us" value={1} style={{backgroundColor: '#584915'}}>
-              <div>
-                <About/>
-              </div>
-            </Tab>
-            <Tab label="Contact" value={2} style={{backgroundColor: '#584915'}}>
+          <div>
+            <Tabs
+              value={this.state.value}
+              onChange={this.handleChange}
+              inkBarStyle={{backgroundColor: 'red', marginLeft: '12.5%'}}
+              tabItemContainerStyle={{width: '80%', margin: 'auto'}}>
+              <Tab label="Home" value={0} style={{backgroundColor: '#584915'}}/>
+              <Tab label="About Us" value={1} style={{backgroundColor: '#584915'}}/>
+              <Tab label="Contact" value={2} style={{backgroundColor: '#584915'}}/>
+            </Tabs>
+
+            <SwipeableViews
+              index={this.state.value}
+              onChangeIndex={this.handleChange}>
+              <Home/>
+              <About/>
               <Contact/>
-            </Tab>
-          </Tabs>
+            </SwipeableViews>
+          </div>
         </MuiThemeProvider>
       </div>
     );
