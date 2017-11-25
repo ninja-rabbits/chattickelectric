@@ -13,6 +13,7 @@ import Contact from './components/contact.js';
 
 // Styles
 import style from '../styles/index.css';
+
 // Other
 import SwipeableViews from 'react-swipeable-views';
 
