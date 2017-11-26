@@ -23,7 +23,7 @@ class Home extends Component {
 
     return (
       <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'flex-start', alignContent: 'stretch', alignItems: 'flex-start'}}>
-          <img src='https://i.imgur.com/l9eQyIX.jpg' style={{width: '35%', marginLeft: '100px', marginTop: '20px'}}/>
+          <img src='chattick.jpg' style={{width: '35%', marginLeft: '100px', marginTop: '20px'}}/>
           <div style={{maxWidth: '45%', margin: '20px', textAlign: 'center'}}>
             <h4 >Celebrating 40 years of excellence!</h4>
             C.H. Attick Electric is a family owned and operated electrical contracting company specializing in commercial and industrial work. Many of its projects include schools, office buildings, shopping centers, wastewater treatment plants, and pump stations.
