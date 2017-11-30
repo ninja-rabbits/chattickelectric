@@ -18,6 +18,7 @@ class Home extends Component {
 
   render() {
 
+
     const PaperStyle = {
       display: 'inline',
       padding: '20px',
